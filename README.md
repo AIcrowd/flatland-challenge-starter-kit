@@ -43,22 +43,20 @@ cd flatland-challenge-starter-kit
 
 ### Test Submission Locally
 
+**NOTE** : Please ensure that you have a redis-server running on localhost.
+You can find more instructions on how to run redis [here](https://redis.io/topics/quickstart)
 ```
 cd flatland-challenge-starter-kit
-export IMAGE_NAME="flatland-random-agent"
-
-# Build docker image for your submission
-./debug_build.sh
-
-# In a separate tab : run redis server
-./run_redis.sh
 
 # In a separate tab : run local grader
-./run_local_grader.sh
+flatland-evaluation --tests <path_to_your_tests_directory>
 
 # In a separate tab :
-# Finally, run your agent locally by :
-./docker_run.sh
+export AICROWD_TESTS_FOLDER=<path_to_your_tests_directory>
+# or on windows :
+# 
+#  SET AICROWD_TESTS_FOLDER=<path_to_your_tests_directory>
+python run.py
 ```
 
 # How do I specify my software runtime ?
@@ -87,8 +85,8 @@ your already existing code to the required structure for this round.
 
 ```json
 {
-  "challenge_id": "flatland-challenge-2019",
-  "grader_id": "flatland-challenge-2019",
+  "challenge_id": "aicrowd_flatland_challenge_2019",
+  "grader_id": "aicrowd_flatland_challenge_2019",
   "authors": ["your-aicrowd-username"],
   "description": "sample description about your awesome agent",
   "license": "MIT",
