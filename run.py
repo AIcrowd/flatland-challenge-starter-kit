@@ -19,7 +19,7 @@ remote_client = FlatlandRemoteClient()
 #####################################################################
 def my_controller(obs, number_of_agents):
     _action = {}
-    for _idx range(number_of_agents):
+    for _idx in range(number_of_agents):
         _action[_idx] = np.random.randint(0, 5)
     return _action
 
