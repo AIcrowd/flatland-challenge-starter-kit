@@ -43,17 +43,32 @@ cd flatland-challenge-starter-kit
 
 ### Test Submission Locally
 
-**NOTE** : Please ensure that you have a redis-server running on localhost.
+* First lets begin by downloading a small set of test envs, and put them at a location of your choice.
+In this exercise, we assume that you will download the test-envs provided at : [https://www.aicrowd.com/challenges/flatland-challenge/dataset_files](https://www.aicrowd.com/challenges/flatland-challenge/dataset_files), and will untar them inside `./scratch/test-envs`, so that you have a directory structure similar to : 
+
+```
+
+```
+
+* `redis-server` : **NOTE** : Please ensure that you have a redis-server running on localhost.
 You can find more instructions on how to run redis [here](https://redis.io/topics/quickstart)
+
+* **Run evaluator**
+
 ```
 cd flatland-challenge-starter-kit
 
 # In a separate tab : run local grader
 flatland-evaluation --tests <path_to_your_tests_directory>
 
+```
+
+* **Run Agent(s)**
+
+```
 # In a separate tab :
 export AICROWD_TESTS_FOLDER=<path_to_your_tests_directory>
-# or on windows :
+# or on Windows :
 # 
 #  SET AICROWD_TESTS_FOLDER=<path_to_your_tests_directory>
 python run.py
@@ -112,16 +127,6 @@ conda env export --no-build > environment.yml
 
 # Note the `--no-build` flag, which is important if you want your anaconda env to be replicable across all
 ```
-
-### Debugging the packaged software environment
-
-If you have issues with your submission because of your software environment and dependencies, you can debug them, by first building the docker image, and then getting a shell inside the image by :
-
-```
-docker run --net=host -it $IMAGE_NAME /bin/bash
-```
-
-and then exploring to find the cause of the issue.
 
 ### Code Entrypoint
 
