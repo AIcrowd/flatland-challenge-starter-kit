@@ -1,6 +1,7 @@
 name: flatland-rl-test
 channels:
   - defaults
+  - conda-forge
 dependencies:
   - _libgcc_mutex=0.1
   - ca-certificates=2019.5.15
@@ -73,5 +74,5 @@ dependencies:
     - webencodings==0.5.1
     - xarray==0.12.3
     - zipp==0.5.2
-prefix: /home/mohanty/anaconda3/envs/flatland-rl-test
+prefix: /home/mohanty/anaconda3/envs/flatland-rl
 
