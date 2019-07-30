@@ -4,6 +4,8 @@
 
 [![gitter-badge](https://badges.gitter.im/AIcrowd-HQ/flatland-rl.png)](https://gitter.im/AIcrowd-HQ/flatland-rl)
 
+![](https://i.imgur.com/9cNtWjs.gif)
+
 Instructions to make submissions to the [SBB CFF Flatland Challenge](https://www.aicrowd.com/challenges/flatland-challenge).
 
 Participants will have to submit their code, with packaging specifications, and the evaluator will automatically build a docker image and execute their agent against an arbitrary number of pre-generated flatland environments.
@@ -19,7 +21,7 @@ pip install aicrowd-repo2docker
 
 - **Anaconda** (By following instructions [here](https://www.anaconda.com/download)) At least version `4.5.11` is required to correctly populate `environment.yml`.
 - **flatland-rl** (By following instructions [here](http://flatland-rl-docs.s3-website.eu-central-1.amazonaws.com/readme.html))
-  **IMPORTANT** : Please note that you will need `flatland-rl` version `>=0.3.5` to be able to submit which you can update in your anaconda env by :
+  **IMPORTANT** : Please note that you will need `flatland-rl` version `>=0.3.8` to be able to submit which you can update in your anaconda env by :
 
 ```
 pip install -U flatland-rl
