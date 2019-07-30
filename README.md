@@ -47,7 +47,38 @@ cd flatland-challenge-starter-kit
 In this exercise, we assume that you will download the test-envs provided at : [https://www.aicrowd.com/challenges/flatland-challenge/dataset_files](https://www.aicrowd.com/challenges/flatland-challenge/dataset_files), and will untar them inside `./scratch/test-envs`, so that you have a directory structure similar to : 
 
 ```
-
+.
+└── test-envs
+    ├── Test_0
+    │   ├── Level_0.pkl
+    │   └── Level_1.pkl
+    ├── Test_1
+    │   ├── Level_0.pkl
+    │   └── Level_1.pkl
+    ├── Test_2
+    │   ├── Level_0.pkl
+    │   └── Level_1.pkl
+    ├── Test_3
+    │   ├── Level_0.pkl
+    │   └── Level_1.pkl
+    ├── Test_4
+    │   ├── Level_0.pkl
+    │   └── Level_1.pkl
+    ├── Test_5
+    │   ├── Level_0.pkl
+    │   └── Level_1.pkl
+    ├── Test_6
+    │   ├── Level_0.pkl
+    │   └── Level_1.pkl
+    ├── Test_7
+    │   ├── Level_0.pkl
+    │   └── Level_1.pkl
+    ├── Test_8
+    │   ├── Level_0.pkl
+    │   └── Level_1.pkl
+    └── Test_9
+        ├── Level_0.pkl
+        └── Level_1.pkl
 ```
 
 * `redis-server` : **NOTE** : Please ensure that you have a redis-server running on localhost.
