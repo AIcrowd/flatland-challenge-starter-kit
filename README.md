@@ -21,7 +21,7 @@ pip install aicrowd-repo2docker
 
 - **Anaconda** (By following instructions [here](https://www.anaconda.com/download)) At least version `4.5.11` is required to correctly populate `environment.yml`.
 - **flatland-rl** (By following instructions [here](http://flatland-rl-docs.s3-website.eu-central-1.amazonaws.com/readme.html))
-  **IMPORTANT** : Please note that you will need `flatland-rl` version `>=0.3.8` to be able to submit which you can update in your anaconda env by :
+  **IMPORTANT** : Please note that you will need `flatland-rl` version `>=0.3.9` to be able to submit which you can update in your anaconda env by :
 
 ```
 pip install -U flatland-rl
