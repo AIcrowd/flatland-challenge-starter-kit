@@ -1,4 +1,4 @@
-name: flatland-rl-test
+name: flatland-rl
 channels:
   - defaults
   - conda-forge

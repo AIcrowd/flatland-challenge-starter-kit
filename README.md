@@ -92,11 +92,12 @@ You can find more instructions on how to run redis [here](https://redis.io/topic
 * **Run evaluator**
 
 ```
-cd flatland-challenge-starter-kit
 
 # In a separate tab : run local grader
-flatland-evaluation --tests <path_to_your_tests_directory>
+flatland-evaluator --tests <path_to_your_tests_directory>
 
+# If you downloaded the files to the location we specified above, then you should be running : 
+flatland-evaluator --tests ./scratch/test-envs/
 ```
 
 * **Run Agent(s)**
