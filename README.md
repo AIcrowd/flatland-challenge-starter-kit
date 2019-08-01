@@ -52,7 +52,7 @@ conda activate flatland-rl
 In this exercise, we assume that you will download the test-envs provided at : [https://www.aicrowd.com/challenges/flatland-challenge/dataset_files](https://www.aicrowd.com/challenges/flatland-challenge/dataset_files), and will untar them inside `./scratch/test-envs`, so that you have a directory structure similar to : 
 
 ```
-.scratch/
+./scratch
 └── test-envs
     ├── Test_0
     │   ├── Level_0.pkl
