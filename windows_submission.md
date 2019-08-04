@@ -28,7 +28,7 @@ chmod +x Anaconda3-2019.07-Linux-x86_64.sh
 For all changes to take affect usually you will have to restart Ubuntu, just close the terminal and run Ubuntu again.
 
 ### Setup
-* Setup you `ssh` keys for your gitlab account by running. You can install in the default directory and use key without password if you like.
+Setup you `ssh` keys for your gitlab account by running. You can install in the default directory and use key without password if you like.
 
 ```sh
 ssh-keygen
@@ -42,7 +42,7 @@ cat id_rsa.pub
 ```
 Copy all the output and add it to your [gitlab keys](https://gitlab.aicrowd.com/profile/keys)
 
-* Clone your own repository remeber to use ssh cloning and change to the directory where you would like to clone it to! Enter `yes` when promted. If you don't have an own repository yet, start by cloning the official starter kit
+Clone your own repository remeber to use ssh cloning and change to the directory where you would like to clone it to! Enter `yes` when promted. If you don't have an own repository yet, start by cloning the official starter kit
 
 ```
 git clone git@gitlab.aicrowd.com:<YOUR_USER_NAME>/flatland-challenge-starter-kit.git
@@ -55,7 +55,7 @@ git clone git@github.com:AIcrowd/flatland-challenge-starter-kit.git
 cd flatland-challenge-starter-kit
 ```
 
-* Create a conda environment from the provided `environment.yml`
+Create a conda environment from the provided `environment.yml`
 
 ```sh
 conda env create -f environment.yml
@@ -63,7 +63,7 @@ conda env create -f environment.yml
 
 This might take a little bit of time to finish.
 
-* Activate the conda environment and install your code specific dependencies
+Activate the conda environment and install your code specific dependencies
 
 ```sh
 conda activate flatland-rl
@@ -152,7 +152,7 @@ Then you can add the correct git remote, and finally submit by doing :
 ```
 cd flatland-challenge-starter-kit
 # Add AIcrowd git remote endpoint
-git remote add aicrowd git@gitlab.aicrowd.com/:<YOUR_AICROWD_USER_NAME>/flatland-challenge-starter-kit.git
+git remote add aicrowd git@gitlab.aicrowd.com:<YOUR_AICROWD_USER_NAME>/flatland-challenge-starter-kit.git
 git push aicrowd master
 
 # Create a tag for your submission and push
