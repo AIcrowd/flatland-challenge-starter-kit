@@ -34,7 +34,7 @@ dependencies:
     - cycler==0.10.0
     - defusedxml==0.6.0
     - filelock==3.0.12
-    - flatland-rl==0.3.8
+    - flatland-rl==2.1.1
     - idna==2.8
     - importlib-metadata==0.19
     - importlib-resources==1.0.2
