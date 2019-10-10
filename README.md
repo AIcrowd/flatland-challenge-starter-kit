@@ -14,7 +14,7 @@ Participants will have to submit their code, with packaging specifications, and 
 
 - **Anaconda** (By following instructions [here](https://www.anaconda.com/download)) At least version `4.5.11` is required to correctly populate `environment.yml`.
 - **flatland-rl** (By following instructions [here](http://flatland-rl-docs.s3-website.eu-central-1.amazonaws.com/readme.html))
-  **IMPORTANT** : Please note that you will need `flatland-rl` version `>=2.1.2` to be able to submit.
+  **IMPORTANT** : Please note that you will need `flatland-rl` version `>=2.1.3` to be able to submit.
 
 
 ### Setup
