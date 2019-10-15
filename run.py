@@ -2,6 +2,7 @@ from flatland.evaluators.client import FlatlandRemoteClient
 from flatland.envs.observations import TreeObsForRailEnv
 from flatland.envs.predictions import ShortestPathPredictorForRailEnv
 import numpy as np
+import time
 
 
 
@@ -65,7 +66,7 @@ while True:
         # and hence its safe to break out of the main evaluation loop
         break
     
-    print("Evaluation Number : {}".format(evaluation_number))
+    #print("Evaluation Number : {}".format(evaluation_number))
 
     #####################################################################
     # Access to a local copy of the environment
@@ -96,21 +97,31 @@ while True:
     #
     # max_time_steps = int(1.5 * (env.width + env.height))
     #
-    while True:
+    time_taken_by_controller = []
+    time_taken_per_step = []
+
+    for k in range(10):
         #####################################################################
         # Evaluation of a single episode
         #
         #####################################################################
         # Compute the action for this step by using the previously 
-        # defined controlle
+        # defined controller
+        time_start = time.time()
         action = my_controller(observation, number_of_agents)
+        time_taken = time.time() - time_start
+        time_taken_by_controller.append(time_taken)
 
         # Perform the chosen action on the environment.
         # The action gets applied to both the local and the remote copy 
         # of the environment instance, and the observation is what is 
         # returned by the local copy of the env, and the rewards, and done and info
         # are returned by the remote copy of the env
+        time_start = time.time()
         observation, all_rewards, done, info = remote_client.env_step(action)
+        time_taken = time.time() - time_start
+        time_taken_per_step.append(time_taken)
+
         if done['__all__']:
             print("Reward : ", sum(list(all_rewards.values())))
             #
@@ -118,6 +129,16 @@ while True:
             # particular Env instantiation is complete, and we can break out 
             # of this loop, and move onto the next Env evaluation
             break
+    
+    np_time_taken_by_controller = np.array(time_taken_by_controller)
+    np_time_taken_per_step = np.array(time_taken_per_step)
+    print("="*100)
+    print("="*100)
+    print("Evaluation Number : ", evaluation_number)
+    print("Current Env Path : ", remote_client.current_env_path)
+    print("Mean/Std of Time taken by Controller : ", np_time_taken_by_controller.mean(), np_time_taken_by_controller.std())
+    print("Mean/Std of Time per Step : ", np_time_taken_per_step.mean(), np_time_taken_per_step.std())
+    print("="*100)
 
 print("Evaluation of all environments complete...")
 ########################################################################
