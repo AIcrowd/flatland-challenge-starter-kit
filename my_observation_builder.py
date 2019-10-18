@@ -8,10 +8,7 @@ import numpy as np
 from flatland.core.env import Environment
 from flatland.core.env_observation_builder import ObservationBuilder
 from flatland.core.env_prediction_builder import PredictionBuilder
-from flatland.core.grid.grid4_utils import get_new_position
-from flatland.core.grid.grid_utils import coordinate_to_position
 from flatland.envs.agent_utils import RailAgentStatus, EnvAgent
-from flatland.utils.ordered_set import OrderedSet
 
 
 class CustomObservationBuilder(ObservationBuilder):
@@ -35,7 +32,6 @@ class CustomObservationBuilder(ObservationBuilder):
         # The instantiations which depend on parameters of the Env object should be 
         # done here, as it is only here that the updated self.env instance is available
         self.rail_obs = np.zeros((self.env.height, self.env.width))
-        print("Env Width : ", self.env.width, "Env Height : ", self.env.height)
 
     def reset(self):
         """
@@ -48,7 +44,6 @@ class CustomObservationBuilder(ObservationBuilder):
                 # Get the transition map value at location _x, _y
                 transition_value = self.env.rail.get_full_transitions(_y, _x)
                 self.rail_obs[_y, _x] = transition_value
-        print("Responding to obs_builder.reset()")
 
     def get(self, handle: int = 0):
         """
