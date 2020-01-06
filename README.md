@@ -179,7 +179,7 @@ Then you can add the correct git remote, and finally submit by doing :
 ```
 cd flatland-challenge-starter-kit
 # Add AIcrowd git remote endpoint
-git remote add aicrowd git@gitlab.aicrowd.com/:<YOUR_AICROWD_USER_NAME>/flatland-challenge-starter-kit.git
+git remote add aicrowd git@gitlab.aicrowd.com:<YOUR_AICROWD_USER_NAME>/flatland-challenge-starter-kit.git
 git push aicrowd master
 
 # Create a tag for your submission and push
