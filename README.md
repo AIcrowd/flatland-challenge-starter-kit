@@ -1,3 +1,5 @@
+> **⚠️ NOTICE: This starter kit was used for 2019 challenge and has been deprecated in favour of 2020 Flatland challenge's starter kit present here: [https://gitlab.aicrowd.com/flatland/neurips2020-flatland-starter-kit](https://gitlab.aicrowd.com/flatland/neurips2020-flatland-starter-kit)**
+
 ![AIcrowd-Logo](https://raw.githubusercontent.com/AIcrowd/AIcrowd/master/app/assets/images/misc/aicrowd-horizontal.png)
 
 # Flatland Challenge Starter Kit
